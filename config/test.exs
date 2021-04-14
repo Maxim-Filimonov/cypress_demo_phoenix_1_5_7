@@ -16,7 +16,7 @@ config :cypress_demo, CypressDemo.Repo,
 # you can enable the server option below.
 config :cypress_demo, CypressDemoWeb.Endpoint,
   http: [port: 4002],
-  server: false
+  server: true
 
 # Print only warnings and errors during test
 config :logger, level: :warn

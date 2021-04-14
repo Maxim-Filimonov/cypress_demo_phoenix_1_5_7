@@ -40,4 +40,8 @@ defmodule CypressDemoWeb.Router do
       live_dashboard "/dashboard", metrics: CypressDemoWeb.Telemetry
     end
   end
+
+  if Mix.env() == :test do
+    forward("/end-to-end", CypressDemo.Plug.TestEndToEnd)
+  end
 end
