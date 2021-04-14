@@ -1,0 +1,5 @@
+<ul>
+  <%= for contact <- @contacts do %>
+    <li><%= Enum.join([contact.first_name, contact.last_name], " ") %></li>
+  <% end %>
+</ul>
