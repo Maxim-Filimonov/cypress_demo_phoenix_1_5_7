@@ -1,20 +1,6 @@
-# CypressDemo
+This repo demonstrates setup of Cypress with Phoenix(1.5.7).
+Largely based on [excellent article](https://medium.com/@svengehring/phoenix-end-to-end-testing-in-real-life-efdba3a85be1) by Sven Gehring.
 
-To start your Phoenix server:
-
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Install Node.js dependencies with `npm install` inside the `assets` directory
-  * Start Phoenix endpoint with `mix phx.server`
-
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+Defiations from the article:
+1. Reset database does not use mix but uses special api call instead. This is done due to conflict with postgresql ability to drop database while server is running. 
+2. Used slighly different model with simple ui to provide input for tests.
