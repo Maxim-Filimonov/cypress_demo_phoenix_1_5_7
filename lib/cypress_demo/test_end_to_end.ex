@@ -45,6 +45,11 @@ defmodule CypressDemo.Plug.TestEndToEnd do
     end
   end
 
+  post "/db/reset" do
+    CypressDemo.Repo.delete_all(CypressDemo.Contact)
+    send_resp(conn, 200, "database reset")
+  end
+
   match(_, do: send_resp(conn, 404, "not found"))
 
   defp checkout_shared_db_conn do
