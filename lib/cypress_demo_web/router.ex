@@ -18,6 +18,7 @@ defmodule CypressDemoWeb.Router do
     pipe_through :browser
 
     live "/", PageLive, :index
+    live "/contacts_live_demo", ContactsLive
     get "/contacts", ContactController, :index
   end
 
